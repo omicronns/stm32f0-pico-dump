@@ -22,6 +22,16 @@
 
 #define MAX_READ_ATTEMPTS (100u)
 
+// Sometimes dummy value is received instead of valid data,
+// set DUMMY_READ_ATTEMPTS to > 0 value to enable readout retrying
+// until other value is received, or attempts limit is reached,
+// when limit is reached assume that DUMMY_VALUE is valid data
+#define DUMMY_READ_ATTEMPTS (0u)
+#define DUMMY_VALUE (0x40021000)
+
+#define POWER_ON_WAIT 5
+#define POWER_OFF_WAIT 1
+
 /* all times in milliseconds */
 /* minimum wait time between reset deassert and attack */
 /* With my test devices this works as 0. Obermaier's default is 20 */

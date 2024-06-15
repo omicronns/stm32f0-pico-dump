@@ -57,6 +57,11 @@ Starting
 
 You can also use the `dump.py` script to dump to a file.
 
+# Troubleshooting
+
+If valid firmware is not being received, check if reset and power signals to target board are reaching correct voltage levels.
+You might need to adjust `POWER_ON_WAIT` and `POWER_OFF_WAIT`, or remove some power decoupling capacitors from target board if that is not the case.
+
 # Disclaimer
 
 This work is heavily based on Johanes Obermaier paper [Shedding too much Light on a Microcontroller's Firmware Protection](https://www.aisec.fraunhofer.de/en/FirmwareProtection.html). I also used portions of its Proof of Concept to migrate this to a Raspberry Pi Pico and Platform.IO so I released in the same license as  the original PoC: MIT.

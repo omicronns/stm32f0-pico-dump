@@ -29,7 +29,7 @@ swdStatus_t extractFlashData(uint32_t const address, uint32_t* const data) {
 
         targetPowerOn();
 
-        delay(5);
+        delay(POWER_ON_WAIT);
 
         dbgStatus = swdInit(&idCode);
 
@@ -70,7 +70,7 @@ swdStatus_t extractFlashData(uint32_t const address, uint32_t* const data) {
 
         targetPowerOff();
 
-        delay(1);
+        delay(POWER_OFF_WAIT);
         targetRestore();
         delay(2);
         targetReset();
